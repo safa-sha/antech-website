@@ -48,7 +48,7 @@ export function CompactServiceCard({
               className="text-primary transition-transform duration-300 group-hover:translate-x-1"
               aria-hidden="true"
             >
-              �
+              &rarr;
             </span>
           </div>
         </div>

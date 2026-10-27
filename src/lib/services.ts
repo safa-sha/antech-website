@@ -16,6 +16,9 @@ export type Service = {
   intro: string;
   applications: string[];
   includes: string[];
+  overview: string[];
+  benefits: string[];
+  related: string[];
 };
 
 export const COMPANY = {
@@ -53,6 +56,16 @@ export const SERVICES: Service[] = [
       "Recording and monitoring setup",
       "Systems of various specifications and brands",
     ],
+    overview: [
+      "ANTECH describes its security work as covering the design, installation and maintenance of electronic security systems, with assessment, programming and handover forming part of the process.",
+      "The original service information also describes centralized CCTV video management across multiple premises, remote monitoring and operator reporting. The right arrangement depends on the site and the requirements discussed during an assessment.",
+    ],
+    benefits: [
+      "Review live or recorded camera views for a clearer picture of activity at a premises.",
+      "Bring camera coverage for multiple locations into a centralized video management workflow where appropriate.",
+      "Choose a system layout around the areas and operational needs that matter to the site.",
+    ],
+    related: ["access-control-system", "gate-barrier-system", "networking"],
   },
   {
     slug: "access-control-system",
@@ -71,6 +84,16 @@ export const SERVICES: Service[] = [
       "Electric lock integration",
       "User access configuration",
     ],
+    overview: [
+      "Access control manages entry to selected doors or areas. A reader checks a credential, and the system applies the access permissions configured for that entrance.",
+      "ANTECH's existing service information lists card, PIN and biometric credentials, door readers, electric lock integration and user access configuration. The suitable credential and door arrangement varies by premises.",
+    ],
+    benefits: [
+      "Set controlled entry for selected doors and restricted rooms.",
+      "Manage who is permitted to use a configured entrance.",
+      "Use an access arrangement suited to the premises and its day-to-day entry needs.",
+    ],
+    related: ["time-management-system", "security-system", "gate-barrier-system"],
   },
   {
     slug: "time-management-system",
@@ -85,6 +108,16 @@ export const SERVICES: Service[] = [
       "Staff enrolment setup",
       "Attendance record access",
     ],
+    overview: [
+      "Time management systems record staff clock-in and clock-out activity through an attendance terminal. Businesses can use these records to review attendance and support routine workforce administration.",
+      "The current project information describes fingerprint or card readers, staff enrolment and access to attendance records. Available reporting depends on the selected system and its configuration.",
+    ],
+    benefits: [
+      "Keep attendance records in a consistent system instead of relying only on manual notes.",
+      "Review clock-in and clock-out activity for enrolled staff.",
+      "Choose a terminal credential method suited to the workplace.",
+    ],
+    related: ["access-control-system", "computer-services", "networking"],
   },
   {
     slug: "computer-services",
@@ -103,6 +136,16 @@ export const SERVICES: Service[] = [
       "Troubleshooting and repair",
       "Routine maintenance",
     ],
+    overview: [
+      "Business computers support daily work such as communication, document handling and point-of-sale operations. Setup and troubleshooting help keep those workstations usable as business needs change.",
+      "ANTECH's original computer services page focuses on IT needs for small and medium enterprises and describes work across Dubai, Ajman and Sharjah. The current project lists hardware setup, troubleshooting, repair and routine maintenance.",
+    ],
+    benefits: [
+      "Get help setting up workstations for business use.",
+      "Investigate computer issues that interrupt day-to-day tasks.",
+      "Discuss routine maintenance needs for the equipment in use.",
+    ],
+    related: ["networking", "time-management-system", "security-system"],
   },
   {
     slug: "networking",
@@ -121,6 +164,16 @@ export const SERVICES: Service[] = [
       "Network rack and patch panel setup",
       "Connectivity for connected devices",
     ],
+    overview: [
+      "A business network connects computers and other devices so they can communicate and reach shared resources. A useful network plan considers where devices are located, how they connect and what coverage the premises needs.",
+      "The current project describes structured cabling, network rack and patch panel setup, and connectivity for connected devices. These foundations can support office equipment and connected security systems; the final scope depends on the site.",
+    ],
+    benefits: [
+      "Organize wired connections and equipment around the layout of a premises.",
+      "Plan capacity and coverage as offices or device needs change.",
+      "Provide network connectivity for compatible business and security devices.",
+    ],
+    related: ["security-system", "computer-services", "access-control-system"],
   },
   {
     slug: "gate-barrier-system",
@@ -139,6 +192,16 @@ export const SERVICES: Service[] = [
       "Access control integration",
       "Entry point setup",
     ],
+    overview: [
+      "A vehicle barrier controls when cars can pass through a driveway or parking entrance. It can help organize an entry point where vehicles need to stop for an access decision.",
+      "The current project lists barrier installation, entry point setup and access control integration. Site layout, traffic flow and the required control method should be considered before selecting an arrangement.",
+    ],
+    benefits: [
+      "Create a defined vehicle entry point for a property.",
+      "Coordinate an entrance with an access process where the selected system supports it.",
+      "Consider the physical layout and expected vehicle movement when planning the installation.",
+    ],
+    related: ["access-control-system", "security-system", "networking"],
   },
 ];
 

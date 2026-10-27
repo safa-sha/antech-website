@@ -90,18 +90,18 @@ export function BrandsSection() {
             Brands We Work With
           </h2>
         </div>
-        <ul className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-12">
+        <ul className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-8 sm:grid-cols-3 sm:gap-x-8 lg:grid-cols-5 lg:gap-x-10">
           {brands.map((brand) => (
             <li
               key={brand.name}
               data-reveal
-              className="flex h-16 w-full max-w-40 items-center justify-center sm:h-20"
+              className="flex h-20 w-full max-w-52 items-center justify-center sm:h-24"
             >
               <img
                 src={brand.src}
                 alt={`${brand.name} logo`}
                 loading="lazy"
-                className="max-h-full max-w-full object-contain mix-blend-multiply"
+                className={`max-h-full max-w-full object-contain mix-blend-multiply ${brand.name === "ZKTeco" ? "w-48" : "w-44"}`}
               />
             </li>
           ))}
