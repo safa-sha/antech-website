@@ -12,6 +12,8 @@ export type Service = {
   slug: string;
   name: string;
   short: string;
+  catalogSummary: string;
+  highlights: string[];
   image: string;
   intro: string;
   applications: string[];
@@ -40,8 +42,14 @@ export const SERVICES: Service[] = [
   {
     slug: "security-system",
     name: "Security System",
-    short:
-      "CCTV surveillance installation by an Ajman Police approved installer.",
+    short: "CCTV surveillance, recording and video management for your premises.",
+    catalogSummary:
+      "CCTV surveillance and video management for homes, shops, offices, warehouses and multi-site premises.",
+    highlights: [
+      "CCTV camera installation",
+      "Recording and monitoring setup",
+      "Video management across multiple premises",
+    ],
     image: security,
     intro:
       "ANTECH is one of the Ajman Police approved CCTV installers, installing the latest surveillance systems of various specifications and brands.",
@@ -71,6 +79,13 @@ export const SERVICES: Service[] = [
     slug: "access-control-system",
     name: "Access Control System",
     short: "Control who enters your premises, and when.",
+    catalogSummary:
+      "Manage entry to office doors, restricted rooms and residential entrances with configured access permissions.",
+    highlights: [
+      "Door access readers",
+      "Card, PIN or biometric credentials",
+      "Electric lock and user setup",
+    ],
     image: access,
     intro:
       "Access control systems manage entry to doors and restricted areas using credentials such as cards, PIN codes or biometrics.",
@@ -99,6 +114,13 @@ export const SERVICES: Service[] = [
     slug: "time-management-system",
     name: "Time Management System",
     short: "Attendance terminals for accurate staff time records.",
+    catalogSummary:
+      "Record staff clock-ins and clock-outs at offices, retail teams and work sites using attendance terminals.",
+    highlights: [
+      "Attendance terminal setup",
+      "Staff enrolment",
+      "Attendance record access",
+    ],
     image: time,
     intro:
       "Time management systems record staff attendance with terminals such as fingerprint or card readers, giving businesses dependable time records.",
@@ -123,6 +145,13 @@ export const SERVICES: Service[] = [
     slug: "computer-services",
     name: "Computer Services",
     short: "Setup, maintenance and support for your computers.",
+    catalogSummary:
+      "Computer setup and troubleshooting for SMEs, offices and retail workstations that rely on day-to-day IT.",
+    highlights: [
+      "Hardware setup",
+      "Troubleshooting and repair",
+      "Routine maintenance",
+    ],
     image: computer,
     intro:
       "Computer services cover the setup, troubleshooting and maintenance of workstations so your business keeps running.",
@@ -151,6 +180,13 @@ export const SERVICES: Service[] = [
     slug: "networking",
     name: "Networking",
     short: "Structured cabling and network infrastructure.",
+    catalogSummary:
+      "Plan cabling and connectivity for new offices, network expansions and connected workplace or security devices.",
+    highlights: [
+      "Structured cabling",
+      "Rack and patch panel setup",
+      "Connectivity for connected devices",
+    ],
     image: network,
     intro:
       "Networking services build the cabling and connectivity your cameras, computers and access systems depend on.",
@@ -179,6 +215,13 @@ export const SERVICES: Service[] = [
     slug: "gate-barrier-system",
     name: "Gate Barrier System",
     short: "Automated barriers for vehicle entry points.",
+    catalogSummary:
+      "Plan controlled vehicle entry for parking areas and residential, commercial or industrial premises.",
+    highlights: [
+      "Barrier installation",
+      "Vehicle entry point setup",
+      "Access control integration",
+    ],
     image: gate,
     intro:
       "Gate barrier systems control vehicle access at parking areas and site entrances with automated boom barriers.",

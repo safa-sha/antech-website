@@ -85,8 +85,9 @@ function RouteComponent() {
           <p data-reveal className="eyebrow">Explore more</p>
           <h2 data-reveal id="related-heading" className="mt-3 text-3xl font-semibold">Related services</h2>
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {relatedServices.map((related) => related && <Link data-reveal key={related.slug} to="/services/$slug" params={{ slug: related.slug }} className="group flex items-center justify-between rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/50">
-              <span><span className="block font-semibold text-foreground">{related.name}</span><span className="mt-1 block text-sm text-muted-foreground">{related.short}</span></span><ArrowRight size={18} className="ml-4 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+            {relatedServices.map((related) => related && <Link data-reveal key={related.slug} to="/services/$slug" params={{ slug: related.slug }} className="group overflow-hidden rounded-xl border border-border bg-card transition-colors hover:border-primary/50">
+              <img src={related.image} alt={`${related.name} service`} loading="lazy" width={720} height={450} className="aspect-[16/9] w-full object-cover" />
+              <span className="flex min-h-24 items-center justify-between gap-4 p-5"><span><span className="block font-semibold text-foreground">{related.name}</span><span className="mt-1 block text-sm text-muted-foreground">{related.short}</span></span><ArrowRight size={18} className="shrink-0 text-primary transition-transform group-hover:translate-x-1" /></span>
             </Link>)}
           </div>
         </div>

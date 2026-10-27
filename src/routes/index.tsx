@@ -5,7 +5,7 @@ import {
   CertificationSection,
 } from "@/components/CredentialsAndBrands";
 import { Hero } from "@/components/Hero";
-import { ServiceCard } from "@/components/ServiceCard";
+import { CompactServiceCard } from "@/components/CompactServiceCard";
 import { SERVICES } from "@/lib/services";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -53,7 +53,7 @@ function RouteComponent() {
           </div>
           <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service, index) => (
-              <ServiceCard key={service.slug} service={service} index={index} />
+              <CompactServiceCard key={service.slug} service={service} index={index} />
             ))}
           </div>
         </div>

@@ -7,6 +7,7 @@ import {
 import appCss from "../styles.css?url";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
+import { FloatingEnquiry } from "@/components/FloatingEnquiry";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -49,6 +50,7 @@ function RootComponent() {
         <SiteNav />
         <Outlet />
         <SiteFooter />
+        <FloatingEnquiry />
         <Scripts />
       </body>
     </html>
