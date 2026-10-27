@@ -3,10 +3,8 @@ import type { Service } from "@/lib/services";
 
 export function ServiceCard({
   service,
-  index,
 }: {
   service: Service;
-  index: number;
 }) {
   return (
     <div data-reveal className="h-full">
@@ -20,9 +18,6 @@ export function ServiceCard({
             height={832}
             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
-          <span className="absolute left-5 top-5 font-mono text-xs text-primary">
-            0{index + 1}
-          </span>
         </div>
         <div className="flex flex-1 flex-col p-5">
           <h3 className="min-h-12 text-xl font-semibold leading-tight">

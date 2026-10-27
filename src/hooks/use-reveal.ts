@@ -17,19 +17,21 @@ export function useReveal<T extends HTMLElement>() {
       ctx = gsap.context(() => {
         gsap.utils
           .toArray<HTMLElement>("[data-reveal-group]", el)
+          .filter((group) => !group.hasAttribute("data-reveal-independent"))
           .concat(el.matches("[data-reveal-group]") ? [el] : [])
           .forEach((group) => {
             const items = group.querySelectorAll("[data-reveal]");
+            const crisp = group.hasAttribute("data-reveal-crisp");
             gsap.from(items, {
-              y: 20,
-              opacity: 0,
+              y: crisp ? 8 : 20,
+              ...(crisp ? {} : { opacity: 0 }),
               scale: group.hasAttribute("data-reveal-scale") ? 0.985 : 1,
-              duration: 0.6,
+              duration: crisp ? 0.22 : 0.6,
               ease: "power2.out",
-              stagger: 0.08,
+              stagger: crisp ? 0.025 : 0.08,
               scrollTrigger: {
                 trigger: group,
-                start: "top 82%",
+                start: crisp ? "top 92%" : "top 82%",
                 once: true,
               },
             });

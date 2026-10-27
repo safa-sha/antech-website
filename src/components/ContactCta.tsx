@@ -8,14 +8,13 @@ export function ContactCta() {
     <section
       ref={ref}
       data-reveal-group
+      data-reveal-independent
+      data-reveal-crisp
       className="dark-panel relative overflow-hidden py-32"
     >
       <div className="absolute inset-0 bg-vignette" />
       <div className="relative mx-auto max-w-4xl px-6 text-center">
-        <p data-reveal className="eyebrow">
-          Start a project
-        </p>
-        <h2 data-reveal className="mt-6 text-4xl font-semibold sm:text-6xl">
+        <h2 data-reveal className="text-4xl font-semibold sm:text-6xl">
           Tell us what you need to protect.
         </h2>
         <div

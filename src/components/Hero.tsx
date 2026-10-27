@@ -68,19 +68,22 @@ export function Hero() {
       ctx = gsap.context(() => {
         if (!state.reduced) {
           const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-          tl.from(".hero-eyebrow", { y: 20, opacity: 0, duration: 0.9 }, 1.2)
+          tl.from(
+            ".hero-eyebrow",
+            { y: 12, opacity: 0, duration: 0.45 },
+            0.7,
+          )
             .from(
               ".hero-line > span",
               { yPercent: 110, duration: 1.3, stagger: 0.12 },
-              1.35,
+              1.2,
             )
-            .from(".hero-copy", { y: 20, opacity: 0, duration: 1 }, 1.9)
+            .from(".hero-copy", { y: 20, opacity: 0, duration: 1 }, 1.75)
             .from(
               ".hero-cta > *",
               { y: 20, opacity: 0, duration: 0.9, stagger: 0.1 },
-              2.05,
-            )
-            .from(".hero-meta", { opacity: 0, duration: 1.2 }, 2.3);
+              1.9,
+            );
         }
         ScrollTrigger.create({
           trigger: root.current,
@@ -175,10 +178,10 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-fade" />
 
         <div className="hero-text relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 max-md:justify-center max-md:pt-24">
-          <p className="hero-eyebrow eyebrow">
+          <p className="hero-eyebrow mb-3 text-sm font-semibold tracking-wide text-muted-foreground">
             Ajman Police Approved CCTV Installer
           </p>
-          <h1 className="mt-6 max-w-[min(58vw,42rem)] text-4xl font-semibold leading-[0.95] max-md:mt-5 max-md:max-w-full md:text-7xl lg:text-8xl">
+          <h1 className="max-w-[min(58vw,42rem)] text-4xl font-semibold leading-[0.95] max-md:max-w-full md:text-6xl lg:text-7xl">
             <span className="hero-line block overflow-hidden">
               <span className="block">Your security</span>
             </span>
@@ -205,15 +208,10 @@ export function Hero() {
               </Link>
             </div>
           </div>
-          <div className="hero-meta absolute bottom-10 left-6 flex items-center gap-3 font-mono text-xs text-muted-foreground max-md:hidden">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />{" "}
-            Scroll to explore
-          </div>
         </div>
 
         <div className="hero-next absolute inset-x-0 bottom-[12vh] z-10 mx-auto max-w-7xl px-6 opacity-0">
-          <p className="eyebrow">What we do</p>
-          <p className="mt-4 max-w-2xl font-display text-3xl leading-tight sm:text-5xl">
+          <p className="max-w-2xl font-display text-3xl leading-tight sm:text-5xl">
             One partner for the systems that keep your premises protected and
             connected.
           </p>

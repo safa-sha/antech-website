@@ -33,14 +33,11 @@ function RouteComponent() {
         <div className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <p data-reveal className="eyebrow">
-                What we do
-              </p>
               <h2
                 data-reveal
-                className="mt-4 max-w-2xl text-4xl font-semibold sm:text-6xl"
+                className="max-w-2xl text-3xl font-semibold sm:text-5xl"
               >
-                Systems that keep your premises protected and connected.
+                Security &amp; Technology Solutions
               </h2>
             </div>
             <Link
@@ -52,8 +49,8 @@ function RouteComponent() {
             </Link>
           </div>
           <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((service, index) => (
-              <CompactServiceCard key={service.slug} service={service} index={index} />
+            {SERVICES.map((service) => (
+              <CompactServiceCard key={service.slug} service={service} />
             ))}
           </div>
         </div>
@@ -62,8 +59,8 @@ function RouteComponent() {
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div data-reveal>
-              <p className="eyebrow">Why ANTECH?</p>
-              <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight sm:text-5xl">Technical systems, considered together.</h2>
+              <p className="text-sm font-semibold tracking-wide text-muted-foreground">Why ANTECH?</p>
+              <h2 className="mt-2 max-w-xl text-4xl font-semibold leading-tight sm:text-5xl">Technical systems, considered together.</h2>
               <p className="mt-5 max-w-xl leading-7 text-muted-foreground">Explore connected services for premises, teams and the technology they use.</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -71,10 +68,9 @@ function RouteComponent() {
                 { title: "A broad service range", text: "Security, access, attendance, computers, networking and vehicle entry systems." },
                 { title: "Site-aware planning", text: "Start with the premises and the needs the system is expected to address." },
                 { title: "Systems that connect", text: "Consider how cameras, network infrastructure and access needs relate to one another." },
-              ].map((reason, index) => (
+              ].map((reason) => (
                 <article data-reveal key={reason.title} className="rounded-xl border border-border bg-card p-5 sm:p-6">
-                  <span className="font-mono text-xs text-primary">0{index + 1}</span>
-                  <h3 className="mt-4 text-lg font-semibold">{reason.title}</h3>
+                  <h3 className="text-lg font-semibold">{reason.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{reason.text}</p>
                 </article>
               ))}

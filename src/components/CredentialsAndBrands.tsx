@@ -24,18 +24,15 @@ export function CertificationSection() {
         className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 sm:py-24 lg:grid-cols-[1fr_0.9fr] lg:gap-16"
       >
         <div>
-          <p className="eyebrow">Credentials</p>
           <h2
             id="certification-heading"
-            className="mt-4 text-4xl font-semibold sm:text-5xl"
+            className="text-4xl font-semibold sm:text-5xl"
           >
             Our Certification
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Ajman Police issued this certificate for CCTV surveillance
-            installation by Al Naseeb Technical Services. The certificate
-            displayed lists an expiry date of 12 November 2025; current
-            certification status has not been confirmed.
+            Official certification documentation for CCTV surveillance
+            installation by Al Naseeb Technical Services.
           </p>
           <a
             href="/images/ajman-police-certificate.png"
@@ -55,7 +52,7 @@ export function CertificationSection() {
         >
           <img
             src="/images/ajman-police-certificate.png"
-            alt="Ajman Police certificate of civil service provider for Al Naseeb Technical Services; listed expiry date 12 November 2025"
+            alt="Ajman Police certificate of civil service provider for Al Naseeb Technical Services"
             width={1240}
             height={877}
             loading="lazy"
@@ -79,13 +76,10 @@ export function BrandsSection() {
     >
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
         <div className="text-center">
-          <p data-reveal className="eyebrow">
-            Technology we work with
-          </p>
           <h2
             data-reveal
             id="brands-heading"
-            className="mt-4 text-3xl font-semibold sm:text-4xl"
+            className="text-3xl font-semibold sm:text-4xl"
           >
             Brands We Work With
           </h2>
@@ -95,13 +89,13 @@ export function BrandsSection() {
             <li
               key={brand.name}
               data-reveal
-              className="flex h-20 w-full max-w-52 items-center justify-center sm:h-24"
+              className="flex h-20 w-40 items-center justify-center sm:h-24 sm:w-48"
             >
               <img
                 src={brand.src}
                 alt={`${brand.name} logo`}
                 loading="lazy"
-                className={`max-h-full max-w-full object-contain mix-blend-multiply ${brand.name === "ZKTeco" ? "w-48" : "w-44"}`}
+                className="h-full w-44 max-w-full object-contain mix-blend-multiply"
               />
             </li>
           ))}

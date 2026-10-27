@@ -3,10 +3,8 @@ import type { Service } from "@/lib/services";
 
 export function CompactServiceCard({
   service,
-  index,
 }: {
   service: Service;
-  index: number;
 }) {
   return (
     <div data-reveal className="h-full">
@@ -25,9 +23,6 @@ export function CompactServiceCard({
             className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-60" />
-          <span className="absolute left-3.5 top-3.5 inline-flex items-center rounded-md border border-white/60 bg-white/90 px-2.5 py-0.5 font-mono text-[11px] font-semibold tracking-wider text-primary shadow-xs backdrop-blur-xs">
-            0{index + 1}
-          </span>
         </div>
 
         <div className="flex flex-1 flex-col pt-4">

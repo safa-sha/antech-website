@@ -29,12 +29,9 @@ function RouteComponent() {
         data-reveal-group
         className="mx-auto max-w-7xl px-6 pb-16 pt-32 sm:pb-20"
       >
-        <p data-reveal className="eyebrow">
-          ANTECH services
-        </p>
         <h1
           data-reveal
-          className="mt-5 max-w-3xl text-5xl font-semibold sm:text-7xl"
+          className="max-w-3xl text-4xl font-semibold sm:text-6xl"
         >
           Practical systems for safer, smarter spaces.
         </h1>
@@ -51,8 +48,8 @@ function RouteComponent() {
       >
         <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32">
           <div className="grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((service, index) => (
-              <ServiceCard key={service.slug} service={service} index={index} />
+            {SERVICES.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
         </div>

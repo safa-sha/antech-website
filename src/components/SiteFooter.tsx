@@ -23,7 +23,7 @@ export function SiteFooter() {
           </p>
         </div>
         <div data-reveal>
-          <h2 className="eyebrow mb-4">Services</h2>
+          <h2 className="mb-4 text-sm font-semibold text-foreground">Services</h2>
           <ul className="space-y-2 text-sm">
             {SERVICES.map((s) => (
               <li key={s.slug}>
@@ -39,7 +39,7 @@ export function SiteFooter() {
           </ul>
         </div>
         <div data-reveal>
-          <h2 className="eyebrow mb-4">Contact</h2>
+          <h2 className="mb-4 text-sm font-semibold text-foreground">Contact</h2>
           <ul className="space-y-2 text-sm">
             {COMPANY.phones.map((p) => (
               <li key={p.tel}>

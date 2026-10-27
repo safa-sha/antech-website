@@ -29,8 +29,7 @@ function RouteComponent() {
     <main ref={ref}>
       <section data-reveal-group className="mx-auto max-w-7xl px-6 pb-16 pt-32 sm:pb-20">
         <div className="max-w-3xl">
-          <p data-reveal className="eyebrow">Get in touch</p>
-          <h1 data-reveal className="mt-5 text-5xl font-semibold leading-[1.05] sm:text-7xl">Let&apos;s talk about your project.</h1>
+          <h1 data-reveal className="text-4xl font-semibold leading-[1.05] sm:text-6xl">Let&apos;s talk about your project.</h1>
           <p data-reveal className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">Contact Al Naseeb Technical Services to discuss your security and technical service needs.</p>
           {service && <p data-reveal className="mt-6 inline-flex flex-wrap rounded-full border border-border bg-surface px-5 py-3 text-sm">Enquiry about:<span className="ml-2 font-medium text-primary">{service}</span></p>}
         </div>
@@ -57,7 +56,6 @@ function RouteComponent() {
         <div data-reveal className="min-h-[360px] overflow-hidden rounded-2xl border border-border bg-surface sm:min-h-[480px]">
           <iframe title="Google Maps search for Al Naseeb Technical Services in Al Muwaihat 3, Ajman" src={mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-full min-h-[360px] w-full border-0 sm:min-h-[480px]" allowFullScreen />
         </div>
-        <p className="text-xs leading-5 text-muted-foreground lg:col-start-2">Map search shows the verified Al Muwaihat 3, Ajman address area; the exact business pin has not been independently confirmed.</p>
       </section>
     </main>
   );
