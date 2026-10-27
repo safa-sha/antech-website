@@ -1,0 +1,76 @@
+import { Link } from "@tanstack/react-router";
+import { COMPANY, SERVICES } from "@/lib/services";
+import { useReveal } from "@/hooks/use-reveal";
+import { BrandLogo } from "./SiteNav";
+
+export function SiteFooter() {
+  const ref = useReveal<HTMLElement>();
+
+  return (
+    <footer
+      ref={ref}
+      data-reveal-group
+      className="border-t border-border bg-surface"
+    >
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4">
+        <div data-reveal className="md:col-span-2">
+          <BrandLogo />
+          <p className="mt-4 max-w-sm text-sm text-muted-foreground">
+            {COMPANY.legal}. Ajman Police approved CCTV installer.
+          </p>
+          <p className="mt-6 text-sm text-muted-foreground">
+            {COMPANY.address}
+          </p>
+        </div>
+        <div data-reveal>
+          <h2 className="eyebrow mb-4">Services</h2>
+          <ul className="space-y-2 text-sm">
+            {SERVICES.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div data-reveal>
+          <h2 className="eyebrow mb-4">Contact</h2>
+          <ul className="space-y-2 text-sm">
+            {COMPANY.phones.map((p) => (
+              <li key={p.tel}>
+                <a
+                  href={`tel:${p.tel}`}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {p.display}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href={`mailto:${COMPANY.email}`}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                {COMPANY.email}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-border">
+        <p
+          data-reveal
+          className="mx-auto max-w-7xl px-6 py-6 text-xs text-muted-foreground"
+        >
+          © {new Date().getFullYear()} ANTECH — {COMPANY.legal}. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}
