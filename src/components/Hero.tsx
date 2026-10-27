@@ -210,7 +210,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero-next absolute inset-x-0 bottom-[12vh] z-10 mx-auto max-w-7xl px-6 opacity-0">
+        <div className="hero-next pointer-events-none absolute inset-x-0 bottom-[12vh] z-10 mx-auto max-w-7xl px-6 opacity-0">
           <p className="max-w-2xl font-display text-3xl leading-tight sm:text-5xl">
             One partner for the systems that keep your premises protected and
             connected.
