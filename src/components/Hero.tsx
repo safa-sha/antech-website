@@ -178,10 +178,10 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-fade" />
 
         <div className="hero-text relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 max-md:justify-center max-md:pt-24">
-          <p className="hero-eyebrow mb-3 text-sm font-semibold tracking-wide text-muted-foreground">
+          <p className="hero-eyebrow mb-4 text-base font-semibold tracking-wide text-muted-foreground md:text-[1.0625rem]">
             Ajman Police Approved CCTV Installer
           </p>
-          <h1 className="max-w-[min(58vw,42rem)] text-4xl font-semibold leading-[0.95] max-md:max-w-full md:text-6xl lg:text-7xl">
+          <h1 className="max-w-[min(60vw,44rem)] text-[clamp(2.1rem,9.5vw,3rem)] font-semibold leading-[0.94] max-md:max-w-full md:text-[4.25rem] lg:text-[5.25rem]">
             <span className="hero-line block overflow-hidden">
               <span className="block">Your security</span>
             </span>
@@ -192,18 +192,18 @@ export function Hero() {
               <span className="block">responsibility.</span>
             </span>
           </h1>
-          <p className="hero-copy mt-8 max-w-md text-base text-muted-foreground max-md:mt-5 max-md:text-xs max-md:leading-5 sm:text-lg">
+          <p className="hero-copy mt-6 max-w-lg text-base leading-relaxed text-muted-foreground max-md:mt-5 sm:text-lg">
             Surveillance, access control, networking and technical services from
             ANTECH — Al Naseeb Technical Services, Ajman.
           </p>
-          <div className="hero-cta pointer-events-auto mt-10 flex flex-wrap items-center gap-3 max-md:mt-6">
+          <div className="hero-cta pointer-events-auto mt-8 flex flex-wrap items-center gap-4 max-md:mt-6">
             <div>
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact" className="btn-primary hero-button">
                 Make an enquiry →
               </Link>
             </div>
             <div>
-              <Link to="/services" className="btn-ghost">
+              <Link to="/services" className="btn-ghost hero-button">
                 Explore services
               </Link>
             </div>

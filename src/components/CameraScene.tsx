@@ -127,8 +127,8 @@ export default function CameraScene({ state }: { state: SceneState }) {
     >
       <ambientLight intensity={0.25} />
       <directionalLight position={[4, 5, 6]} intensity={1.5} />
-      <pointLight position={[-4, 1, 3]} intensity={8} color="#2f7bff" />
-      <pointLight position={[3, -2, -3]} intensity={5} color="#5fe0ff" />
+      <pointLight position={[-4, 1, 3]} intensity={2.2} color="#2f7bff" />
+      <pointLight position={[3, -2, -3]} intensity={1.5} color="#5fe0ff" />
       <Environment resolution={256}>
         <Lightformer
           intensity={1.7}
@@ -137,14 +137,14 @@ export default function CameraScene({ state }: { state: SceneState }) {
           rotation-x={Math.PI / 2}
         />
         <Lightformer
-          intensity={1.2}
+          intensity={0.45}
           color="#3a8bff"
           position={[-5, 1, -1]}
           rotation-y={Math.PI / 2}
           scale={[20, 1, 1]}
         />
         <Lightformer
-          intensity={0.8}
+          intensity={0.4}
           color="#9fe8ff"
           position={[5, 0, 2]}
           rotation-y={-Math.PI / 2}
@@ -156,11 +156,11 @@ export default function CameraScene({ state }: { state: SceneState }) {
       </Suspense>
       <ContactShadows
         position={[0.6, -1.9, 0]}
-        opacity={0.5}
+        opacity={0.24}
         scale={10}
         blur={2.6}
         far={4}
-        color="#000814"
+        color="#141820"
       />
       {!state.reduced && <CameraDrift state={state} />}
     </Canvas>

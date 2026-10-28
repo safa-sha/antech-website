@@ -230,6 +230,18 @@
   border-color: rgb(245 243 239 / 26%);
 }
 
+.hero-theme .hero-cta .hero-button {
+  padding: 1rem 1.7rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-theme .hero-cta .hero-button {
+    padding: 1.05rem 1.85rem;
+    font-size: 1.0625rem;
+  }
+}
+
 .dark-panel {
   --foreground: var(--brand-warm-white);
   --muted-foreground: #c3c2bf;
